@@ -21,7 +21,7 @@ Now to apply the migrations run:
 $ python manage.py migrate
 ```
 
-Now we need to create and admin user to run the app. Run the following command in your terminal and follow the instructions from the terminal:
+Now we need to create and admin user to run the app. Run the following command in your terminal and follow the instructions:
 
 ```bash
 $ python manage.py createsuperuser
@@ -34,4 +34,10 @@ $ python manage.py runserver
 ```
 
 To enter the admin panel head over to http://127.0.0.1:8000/admin and enter you login and password.
+
+### Registration and loggin in:
+
+![image](https://user-images.githubusercontent.com/130636082/231817928-07833b8e-124c-418a-86e9-249505efa2c6.png)
+
+![image](https://user-images.githubusercontent.com/130636082/231818058-2edbaa5b-ff61-49b6-9f55-4732ca4ee38e.png)
 
