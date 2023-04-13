@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+    <div class="header">
+        <h1>Settings</h1>
+        <a href="{% url 'task_list' %}">Back</a>
+    </div>
+    <div class="wrapper">
+        <div class="setting">
+            <a href="{% url 'password-reset' %}" style="font-size: 24px;">Reset password <i class="fa-solid fa-key"></i></a>
+        </div>
+        <div class="setting">
+            <a href="{% url 'logout' %}" style="font-size: 24px;">Change user <i class="fa-solid fa-user"></i></a>
+        </div>
+    </div>
+{% endblock %}

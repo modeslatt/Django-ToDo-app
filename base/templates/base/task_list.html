@@ -1,0 +1,49 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+<header class="header">
+    {% if request.user.is_authenticated %}
+        <p>Hi, <a href="{% url 'user_settings' %}">{{ request.user }}</a></p>
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</header>
+
+<div class="my-tasks">
+    <h1>My tasks</h1>
+    <a href="{% url 'task_create' %}", style="font-size: 20px;"><i class="fa-solid fa-circle-plus"></i></a>
+</div>
+
+<div class="task-items-wrapper">
+    {% for task in tasks %}
+    <div class="task-items">
+        {% if not task.complete %}
+        <div class="task task-incomplete">
+            <div class="wrapper">
+                <i class="fa-regular fa-circle" style="color: #00CCFF; font-size: 20px;"></i>
+                <a href="{% url 'task_detail' task.id %}" style="font-size: 20px;">{{task}}</a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{% url 'task_update' task.id %}"><i class="fa-solid fa-pen"></i></a>
+                <a href="{% url 'task_delete' task.id %}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+        </div>
+        {% elif task.complete %}
+        <div class="task task-incomplete">
+            <div class="wrapper">
+                <i class="fa-solid fa-circle" style="color: #00CCFF; font-size: 20px;"></i>
+                <s><a href="{% url 'task_detail' task.id %}" style="font-size: 18px;">{{task}}</a></s>
+            </div>
+            <div class="btn-wrapper">
+                <a href="{% url 'task_update' task.id %}"><i class="fa-solid fa-pen"></i></a>
+                <a href="{% url 'task_delete' task.id %}"><i class="fa-solid fa-trash"></i></a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% empty %}
+    <h3>The are no tasks</h3>
+    {% endfor %}
+</div>
+{% endblock content %}

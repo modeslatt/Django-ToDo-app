@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+    <div class="task-detail-wrapper">
+        <div class="task-detail">
+            <h1>Title: {{ task.title }}</h1>
+            {% if task.notes %}
+                <h5>Notes: {{ task.notes }}</h5>
+            {% elif not task.notes %}
+                <h5>No notes</h5>
+            {% endif %}
+            {% if not task.complete %}
+                <h6>Status: <span style="color: #f0ad4e;">not completed</span></h6>
+            {% elif task.complete %}
+                <h6>Status: <span style="color: #5cb85c;">completed</span></h6>
+            {% endif %}
+        </div>
+        <div class="btns" style="flex-direction: row; margin-top: 24px;">
+            <a href="{% url 'task_list' %}" class="cancel-btn">Back</a>
+            <a href="{% url 'task_update' task.id %}" class="submit-btn">Edit</a>
+        </div>
+    </div>
+{% endblock %}

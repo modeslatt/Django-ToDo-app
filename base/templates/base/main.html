@@ -1,0 +1,146 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #00CCFF;
+        }
+        a {
+            text-decoration: none;
+            color: #030303;
+        }
+        a:hover {
+            color: #00CCFF;
+            transition: .2s;
+        }
+        .container {
+            background: #FAFAFA;
+            max-width: 600px;
+            border: none;
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin: 20px 34%;
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+        }
+        .header p {
+            margin-bottom: 0rem;
+        }
+        .my-tasks {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px;
+        }
+        .task-items-wrapper {
+            margin-top: 10px;
+        }
+        .wrapper {
+            text-align: center;
+        }
+        .setting {
+            padding: 10px 10px;
+        }
+        .confirm-delete {
+            text-align: center;
+        }
+        .cancel-btn {
+              background-color: #292b2c;
+              border: none;
+              border-radius: 12px;
+              color: white;
+              padding: 12px 24px;
+              font-size: 16px;
+              margin-top: 24px;
+        }
+        .submit-btn {
+              background-color: #0275d8;
+              border: none;
+              border-radius: 12px;
+              color: white;
+              padding: 12px 24px;
+              font-size: 16px;
+              margin-top: 24px;
+        }
+        form {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              margin: 20px;
+              padding: 20px;
+              border: 1px solid #00CCFF;
+              border-radius: 5px;
+        }
+        input[type="text"],
+        textarea {
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              resize: none;
+        }
+        input[type="checkbox"] {
+              appearance: none; /* Remove the default checkbox appearance */
+              width: 20px;
+              height: 20px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+              position: relative;
+              margin-right: 10px;
+              vertical-align: middle;
+        }
+        input[type="checkbox"]:checked::before {
+              content: "\2713";
+              position: absolute;
+              top: -3px;
+              left: 3px;
+              font-size: 18px;
+              color: #4CAF50;
+        }
+        .task-detail-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .task-detail h1, h5, h6{
+            padding-bottom: 24px;
+        }
+        .confirm-delete {
+            align-items: center;
+        }
+    </style>
+    <title>Todo list</title>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

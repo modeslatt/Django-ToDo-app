@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    adding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #00CCFF;
+}
+a {
+    text-decoration: none;
+    color: #030303;
+}
+a:hover {
+    color: #00CCFF;
+    transition: .2s;
+}
+.container {
+    background: #FAFAFA;
+    max-width: 600px;
+    border: none;
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin: 20px 34%;
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+}
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+.cancel-btn {
+   background-color: #292b2c;
+   border: none;
+   border-radius: 12px;
+   color: white;
+   padding: 12px 24px;
+   font-size: 16px;
+   margin-bottom: 16px;
+}
+.submit-btn {
+   background-color: #0275d8;
+   border: none;
+   border-radius: 12px;
+   color: white;
+   padding: 12px 24px;
+   font-size: 16px;
+   margin-bottom: 16px;
+}
+
+/* Styles for the Register page */
+#register-form {
+  background-color: #f9f9f9;
+}
+
+#register-form h1 {
+  color: #333;
+}
+
+#register-form label[for="username"],
+#register-form label[for="email"],
+#register-form label[for="password"],
+#register-form label[for="confirm-password"] {
+  font-weight: bold;
+}
+
+#register-form input[type="submit"] {
+  background-color: #337ab7;
+}
+
+#register-form input[type="submit"]:hover {
+  background-color: #286090;
+}
+
+/* Styles for the Login page */
+#login-form {
+  background-color: #fff;
+}
+
+#login-form h1 {
+  color: #337ab7;
+}
+
+#login-form label[for="username"],
+#login-form label[for="password"] {
+  font-weight: bold;
+}
+
+#login-form input[type="submit"] {
+  background-color: #337ab7;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: #286090;
+}
