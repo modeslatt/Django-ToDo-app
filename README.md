@@ -9,9 +9,10 @@ To get this repository, run the following command inside your git enabled termin
 $ git clone https://github.com/modeslatt/Django-ToDo-app.git
 ```
 To run the app you will need django to be installed on your computer.
-Once it's downloaded, head to the cloned repo directory and run the following command:
+Once it's downloaded,open the directory of the app and head to the cloned repo directory by runing the following commands:
 
 ```bash
+$ cd Django-ToDo-app
 $ python manage.py makemigrations
 ```
 
