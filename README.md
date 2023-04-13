@@ -35,7 +35,7 @@ $ python manage.py runserver
 
 To enter the admin panel head over to http://127.0.0.1:8000/admin and enter you login and password.
 
-### Registration and loggin in:
+### Registration and logging in:
 
 ![image](https://user-images.githubusercontent.com/130636082/231817928-07833b8e-124c-418a-86e9-249505efa2c6.png)
 
