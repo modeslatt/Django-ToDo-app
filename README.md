@@ -41,3 +41,10 @@ To enter the admin panel head over to http://127.0.0.1:8000/admin and enter you 
 
 ![image](https://user-images.githubusercontent.com/130636082/231818058-2edbaa5b-ff61-49b6-9f55-4732ca4ee38e.png)
 
+### Detail view:
+
+![image](https://user-images.githubusercontent.com/130636082/231818417-7ac02ec6-90f8-4b7b-8544-b423e23404bf.png)
+
+### Creating a task:
+
+![image](https://user-images.githubusercontent.com/130636082/231818542-47f256ec-a145-4ac8-ab10-07fa4ebf944e.png)
